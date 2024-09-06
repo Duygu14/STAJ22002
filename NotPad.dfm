@@ -1,0 +1,137 @@
+object NotePad: TNotePad
+  Left = 0
+  Top = 0
+  Caption = 'NotePad'
+  ClientHeight = 367
+  ClientWidth = 624
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -12
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  Position = poMainFormCenter
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  TextHeight = 14
+  object Panel1: TPanel
+    Left = 0
+    Top = 0
+    Width = 624
+    Height = 367
+    Align = alClient
+    TabOrder = 0
+    ExplicitWidth = 618
+    ExplicitHeight = 358
+    object PageControl: TPageControl
+      Left = 1
+      Top = 1
+      Width = 622
+      Height = 26
+      Align = alTop
+      TabOrder = 0
+      OnChange = PageControlChange
+      OnMouseDown = PageControlMouseDown
+      OnMouseMove = PageControlMouseMove
+      OnMouseUp = PageControlMouseUp
+      ExplicitWidth = 616
+    end
+    object Panel2: TPanel
+      Left = 1
+      Top = 27
+      Width = 622
+      Height = 38
+      Align = alTop
+      TabOrder = 1
+      ExplicitWidth = 616
+      object btnNewTab: TcxButton
+        Left = 105
+        Top = 1
+        Width = 104
+        Height = 36
+        Align = alLeft
+        Caption = 'Yeni Sekme A'#231
+        Default = True
+        LookAndFeel.Kind = lfUltraFlat
+        TabOrder = 0
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -12
+        Font.Name = 'Tahoma'
+        Font.Style = [fsBold]
+        ParentFont = False
+        OnClick = btnNewTabClick
+      end
+      object btnReplace: TcxButton
+        Left = 209
+        Top = 1
+        Width = 104
+        Height = 36
+        Align = alLeft
+        Caption = 'D'#252'zenle'
+        Default = True
+        TabOrder = 1
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -12
+        Font.Name = 'Tahoma'
+        Font.Style = [fsBold]
+        ParentFont = False
+        OnClick = btnReplaceClick
+      end
+      object btnSave: TcxButton
+        Left = 313
+        Top = 1
+        Width = 104
+        Height = 36
+        Align = alLeft
+        Caption = 'Kaydet'
+        Default = True
+        TabOrder = 2
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -12
+        Font.Name = 'Tahoma'
+        Font.Style = [fsBold]
+        ParentFont = False
+        OnClick = btnSaveClick
+      end
+      object btnClose: TcxButton
+        Left = 517
+        Top = 1
+        Width = 104
+        Height = 36
+        Align = alRight
+        Caption = 'Sekme Kapat'
+        Default = True
+        TabOrder = 3
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -12
+        Font.Name = 'Tahoma'
+        Font.Style = [fsBold]
+        ParentFont = False
+        OnClick = btnCloseClick
+        ExplicitLeft = 511
+      end
+      object btnOpenFile: TcxButton
+        Left = 1
+        Top = 1
+        Width = 104
+        Height = 36
+        Align = alLeft
+        Caption = 'Dosya A'#231
+        Default = True
+        LookAndFeel.Kind = lfUltraFlat
+        TabOrder = 4
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -12
+        Font.Name = 'Tahoma'
+        Font.Style = [fsBold]
+        ParentFont = False
+        OnClick = btnOpenFileClick
+      end
+    end
+  end
+end
